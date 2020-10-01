@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, abort, make_response, request
-from .models import todos
+from todo_app.models import todos
 import os
 
 app = Flask(__name__)
@@ -7,6 +7,7 @@ app.config["SECRET_KEY"] = "nininini"
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 db_file = os.path.join(THIS_FOLDER, 'to_do.db')
+
 
 # wyświetla wszystkie rekordy w bazie
 @app.route("/api/sql/todos/", methods=["GET"])
