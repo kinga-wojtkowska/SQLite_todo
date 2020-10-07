@@ -1,7 +1,5 @@
-from flask import Flask
 from todo_app.views import app
 import sqlite3
-import os
 
 app.config["SECRET_KEY"] = "nininini"
 
